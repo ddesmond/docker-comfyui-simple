@@ -2,6 +2,8 @@ version: "1"
 
 services:
   comfyui:
+    container_name: comfyui
+    hostname: comfyui
     build: .
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
