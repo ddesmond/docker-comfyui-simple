@@ -40,12 +40,13 @@ RUN pyenv install $PYTHON_VERSION && \
     pyenv global $PYTHON_VERSION && \
     pyenv rehash && \
     pip install --no-cache-dir --upgrade pip setuptools wheel && \
-    pip install --no-cache-dir \
-    datasets \
-    huggingface-hub "protobuf<4" "click<8.1"
+    curl -LsSf https://astral.sh/uv/install.sh | sh && \
+    uv self update && \
+    uv pip install --no-cache-dir \
+    datasets huggingface-hub "protobuf<4" "click<8.1" --system
 
 # Install Python dependencies
-RUN pip install --no-cache-dir --upgrade -r /setup/requirements.txt
+RUN uv pip install --no-cache-dir --upgrade -r /setup/requirements.txt --system
 
 # Set the working directory to /data mounted from docker compose
 WORKDIR $HOME/app

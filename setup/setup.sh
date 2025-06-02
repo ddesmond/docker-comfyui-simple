@@ -7,7 +7,7 @@ git pull
 
 cp -f /setup/extra_models_paths.yaml $HOME/app/extra_models_paths.yaml && chmod 777 $HOME/app/extra_models_paths.yaml
 
-pip install --no-cache-dir -r requirements.txt
+uv pip install --no-cache-dir -r requirements.txt --system
 
 cd $HOME/app
 # folders relink
@@ -15,7 +15,7 @@ rm -rf models/
 ln -sf /data/models $HOME/app
 
 
-pip install xformers!=0.0.18 --no-cache-dir -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu121
+uv pip install xformers!=0.0.18 --no-cache-dir -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu121 --system
 ls -la .
 
 
@@ -23,7 +23,7 @@ cd custom_nodes
 git clone https://github.com/ltdrdata/ComfyUI-Manager comfyui-manager
 
 cd comfyui-manager
-pip install -r requirements.txt
+uv pip install -r requirements.txt --system
 
 
 # edit security config
