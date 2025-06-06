@@ -8,7 +8,7 @@ services:
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
     ports:
-      - 7860:7860
+      - 8188:8188
     deploy:
       resources:
         reservations:
