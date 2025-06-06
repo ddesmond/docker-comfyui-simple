@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.6.2-runtime-rockylinux9
+FROM nvidia/cuda:12.3.2-runtime-rockylinux9
 
 
 ENV TZ=Europe/Zagreb
