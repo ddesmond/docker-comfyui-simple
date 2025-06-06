@@ -3,6 +3,7 @@
 # folder setup
 cd /data
 echo "Creating folders in /data"
+mkdir -p custom_nodes
 mkdir -p ./models \
 && mkdir -p ./models/checkpoints/ \
 && mkdir -p ./models/clip/ \
