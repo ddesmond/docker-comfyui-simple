@@ -16,7 +16,9 @@ dnf install -y \
 dnf install  -y \
   make gcc patch zlib-devel bzip2 bzip2-devel \
   readline-devel sqlite sqlite-devel openssl-devel \
-  tk-devel libffi-devel xz-devel libuuid-devel gdbm-libs libnsl2
+  tk-devel libffi-devel xz-devel libuuid-devel gdbm-libs libnsl2 \
+  mesa-libGL \
+  g++
 
 updatedb
 locate git | grep bin
