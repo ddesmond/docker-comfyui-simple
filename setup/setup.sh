@@ -37,10 +37,8 @@ else
   pip install -r requirements.txt
 fi
 
-
 pip install xformers!=0.0.18 --no-cache-dir -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu121
 ls -la .
-
 
 # edit security config
 cd $HOME/app
