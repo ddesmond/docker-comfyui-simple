@@ -11,8 +11,27 @@ pip install --no-cache-dir -r requirements.txt
 
 cd $HOME/app
 # folders relink
-rm -rf models/
-ln -sf /data/models $HOME/app
+
+if [[ -L $HOME/app/models ]]
+then
+   echo "MODELS is a symlink to a directory"
+else
+  echo "MODELS is a not symlink to a directory"
+  rm -rf models/
+  ln -sf /data/models $HOME/app
+fi
+
+if [[ -L $HOME/app/custom_nodes ]]
+then
+   echo "custom_nodes is a symlink to a directory"
+else
+  echo "custom_nodes is a not symlink to a directory"
+  rm -rf custom_nodes/
+  ln -sf /data/custom_nodes $HOME/app
+fi
+
+
+
 
 
 pip install xformers!=0.0.18 --no-cache-dir -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu121
