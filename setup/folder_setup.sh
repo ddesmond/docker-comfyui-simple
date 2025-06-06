@@ -2,6 +2,7 @@
 
 # folder setup
 cd /data
+echo "-------------------------------"
 echo "Creating folders in /data"
 mkdir -p custom_nodes
 mkdir -p ./models \
@@ -29,4 +30,5 @@ ls -la /data/
 ls -la /data/models
 
 echo "Folders created in /data/models"
+echo "Folders created in /data/custom_nodes"
 echo "-------------------------------"
