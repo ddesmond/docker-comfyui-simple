@@ -30,18 +30,16 @@ else
   rm -rf custom_nodes/
   ln -sf /data/custom_nodes $HOME/app
   ls -la .
+  cd $HOME/app/custom_nodes
+  git clone https://github.com/ltdrdata/ComfyUI-Manager comfyui-manager
+
+  cd comfyui-manager
+  pip install -r requirements.txt
 fi
 
 
 pip install xformers!=0.0.18 --no-cache-dir -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu121
 ls -la .
-
-
-cd $HOME/app/custom_nodes
-git clone https://github.com/ltdrdata/ComfyUI-Manager comfyui-manager
-
-cd comfyui-manager
-pip install -r requirements.txt
 
 
 # edit security config
