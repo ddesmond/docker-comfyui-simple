@@ -19,6 +19,7 @@ else
   echo "MODELS is a not symlink to a directory"
   rm -rf models/
   ln -sf /data/models $HOME/app
+  ls -la .
 fi
 
 if [[ -L $HOME/app/custom_nodes ]]
@@ -28,10 +29,8 @@ else
   echo "custom_nodes is a not symlink to a directory"
   rm -rf custom_nodes/
   ln -sf /data/custom_nodes $HOME/app
+  ls -la .
 fi
-
-
-
 
 
 pip install xformers!=0.0.18 --no-cache-dir -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu121
