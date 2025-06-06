@@ -37,7 +37,7 @@ pip install xformers!=0.0.18 --no-cache-dir -r requirements.txt --extra-index-ur
 ls -la .
 
 
-cd custom_nodes
+cd $HOME/app/custom_nodes
 git clone https://github.com/ltdrdata/ComfyUI-Manager comfyui-manager
 
 cd comfyui-manager
