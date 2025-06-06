@@ -19,3 +19,4 @@ services:
     volumes:
       - ./outputs:/outputs
       - ./data:/data
+      - ./custom_nodes:/root/app/custom_nodes
