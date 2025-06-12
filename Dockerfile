@@ -39,8 +39,7 @@ ARG PYTHON_VERSION=3.10.12
 RUN pyenv install $PYTHON_VERSION && \
     pyenv global $PYTHON_VERSION && \
     pyenv rehash && \
-    pip install --no-cache-dir --upgrade pip setuptools wheel \
-    datasets huggingface-hub "protobuf<4" "click<8.1"
+    pip install --no-cache-dir --upgrade pip setuptools wheel
 
 # Install Python dependencies
 RUN pip install --no-cache-dir --upgrade -r /setup/requirements.txt
