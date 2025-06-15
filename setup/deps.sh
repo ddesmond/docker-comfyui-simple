@@ -19,7 +19,6 @@ dnf install  -y \
   tk-devel libffi-devel xz-devel libuuid-devel gdbm-libs libnsl2 \
   mesa-libGL \
   g++ \
-  ffmpeg-free \
   libglvnd-devel \
   busybox \
   which

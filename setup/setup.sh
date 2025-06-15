@@ -46,3 +46,6 @@ sed -i "s@normal@weak@g" $HOME/app/user/default/ComfyUI-Manager/config.ini
 cat $HOME/app/user/default/ComfyUI-Manager/config.ini
 
 rm -rf /.comfyui-init
+
+# sed custom_nodes/was-ns/was_suite_config.json
+#     "ffmpeg_bin_path": "/usr/bin/ffmpeg",
