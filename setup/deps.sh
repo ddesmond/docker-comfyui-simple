@@ -20,7 +20,9 @@ dnf install  -y \
   mesa-libGL \
   g++ \
   ffmpeg-free \
-  libglvnd-devel
+  libglvnd-devel \
+  busybox \
+  which
 
 updatedb
 locate git | grep bin
