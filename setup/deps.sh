@@ -18,7 +18,9 @@ dnf install  -y \
   readline-devel sqlite sqlite-devel openssl-devel \
   tk-devel libffi-devel xz-devel libuuid-devel gdbm-libs libnsl2 \
   mesa-libGL \
-  g++
+  g++ \
+  ffmpeg-free \
+  libglvnd-devel
 
 updatedb
 locate git | grep bin
