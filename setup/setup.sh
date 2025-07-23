@@ -45,6 +45,10 @@ cd $HOME/app
 sed -i "s@normal@weak@g" $HOME/app/user/default/ComfyUI-Manager/config.ini
 cat $HOME/app/user/default/ComfyUI-Manager/config.ini
 
+# reinstall custom nodes
+cd $HOME/app/custom_nodes
+find . -maxdepth 1 -type d -exec sh -c 'cd "{}" && [ -f requirements.txt ] && uv pip install -r requirements.txt --system' \;
+
 rm -rf /.comfyui-init
 
 # sed custom_nodes/was-ns/was_suite_config.json

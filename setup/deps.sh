@@ -23,6 +23,8 @@ dnf install  -y \
   busybox \
   which
 
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
 updatedb
 locate git | grep bin
 /usr/bin/git lfs install
